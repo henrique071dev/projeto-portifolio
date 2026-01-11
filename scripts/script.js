@@ -17,13 +17,13 @@ function temaEscuro(tipo) {
 }
 
 botao.addEventListener('click', () => {
-  const isescuro = body.classList.toggle('escuro');
+  const isescuro = body.classList.toggle('escuro')
   temaEscuro(isescuro);
   localStorage.setItem('tema', isescuro ? 'escuro' : 'claro');
 });
 
 // Scroll suave para links de navegação
-const navLinks = document.querySelectorAll('#menu ul a.link');
+const navLinks = document.querySelectorAll('.menuzinho');
 navLinks.forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
@@ -33,7 +33,7 @@ navLinks.forEach(link => {
       const targetPosition = target.offsetTop - headerHeight - 20;
       window.scrollTo({
         top: targetPosition,
-        behavior: 'smooth'
+        behavior: 'smooth' 
       });
     }
   });
